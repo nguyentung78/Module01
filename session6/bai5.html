@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        form {
+            display: flex;
+            flex-direction: row; 
+        }
+        .trai {
+            display: flex;
+            flex-direction: column;
+        }
+        input {
+            width: 500px;
+            height: 35px;
+            border: 1px solid rgb(200, 199, 199);
+            border-radius: 4px;
+            margin-bottom: 10px;
+            margin-right: 10px;
+            font-size: 10px;
+        }
+        textarea {
+            width: 500px;
+            height: 178px;
+            border: 1px solid rgb(200, 199, 199);
+            border-radius: 4px;
+            font-size: 10px;
+            margin-bottom: 10px;
+        }
+        button {
+            background-color: #2563EB;
+            color: white;
+            border: 1px solid white;
+            border-radius: 4px;
+            width: 510px;
+            height: 35px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Gửi thông tin liên hệ cho chúng tôi</h1>
+    <p>Bạn hãy điền nội dung tin nhắn vào form dưới đây. Chúng tôi sẽ trả lời bạn sau khi nhận được</p>
+    <form action="">
+        <div class="trai">
+            <input type="text" name="name" id="name" placeholder="Họ và tên *">
+            <input type="email" name="email" id="email" placeholder="Email *">
+            <input type="text" name="sdt" id="sdt" placeholder="Số điện thoại *">
+            <input type="text" name="address" id="address" placeholder="Địa chỉ *">
+        </div>
+        <div class="phai">
+            <textarea name="content" id="content" placeholder="Nội dung *" ></textarea>
+            <button>Gửi</button>
+        </div>
+    </form>
+</body>
+</html>

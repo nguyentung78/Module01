@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <style>
+        .tong {
+            background-color: #201D37;
+            font-family: Arial, Helvetica, sans-serif;
+            width: 900px;
+            margin-left: 200px;
+        }
+
+        .tong, .dau, .than, .form div {
+            margin-top: 20px;
+        }
+
+        .dau {
+            background-color: #0E0D19;
+            color: #E2668F;
+            height: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .than {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .form {
+            background-color: white;
+            margin: 30px 30px 0 30px;
+            padding: 20px;
+            border-radius: 8px;
+            width: 80%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        h2 {
+            text-align: center;
+        }
+
+        .button button {
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            outline: none;
+            border: 1px solid transparent;
+            font-weight: 600;
+            margin-right: 5px ;
+        }
+
+        button:focus {
+            background-color: #E2668F;
+            color: white;
+        }
+
+        .inp {
+            display: flex;
+            align-items: center;
+            width: 100%;
+            position: relative; 
+        }
+
+        input {
+            width: 100%;
+            height: 46px;
+            border-radius: 6px;
+            border: 2px solid #DADADA;
+            padding: 10px 60px 10px 10px; 
+            box-sizing: border-box; 
+        }
+
+        input::placeholder {
+            color: #888; 
+            text-indent: 10px; 
+        }
+
+        .btn {
+            position: absolute;
+            right: 30px;
+            height: 35px;
+            width: 60px;
+            border: 1px solid white;
+            border-radius: 4px;
+            padding: 5px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: black;
+            cursor: pointer;
+        }
+        .phude {
+            color: aliceblue;
+            display: flex;
+            justify-content: space-between;
+            width: 85%;
+            font-weight: bold;
+            font-size: 15px;
+            margin: 15px;
+        }
+        .reviews {
+            background-color: white;
+            color: black;
+            width: 85%;
+            height: 80px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            position: relative; 
+            display: flex;
+            align-items: center;
+
+        }
+        .so {
+            border-radius: 50%;
+            width: 36px;
+            height: 36px;
+            background-color: #E2668F;
+            color: white;
+            border: 1px solid #E2668F;
+            position: absolute;
+            top: -10px;
+            left: -10px;
+        }
+        .chu {
+            margin-left: 40px;
+
+        }
+        .icon {
+            position: absolute;
+            right: 20px;
+            top: 10px
+        }
+    </style>
+</head>
+
+<body>
+    <div class="tong">
+        <div class="dau"><b>Feedback TA</b></div>
+        <div class="than">
+            <div class="form">
+                <h2>Thầy Phú dạy có hay không ???</h2>
+                <div class="button">
+                    <button>1</button>
+                    <button>2</button>
+                    <button>3</button>
+                    <button>4</button>
+                    <button>5</button>
+                    <button>6</button>
+                    <button>7</button>
+                    <button>8</button>
+                    <button>9</button>
+                    <button>10</button>
+                </div>
+                <div></div>
+                <div class="inp">
+                    <input type="text" placeholder="Nhập nội dung feedback">
+                    <button class="btn">Send</button>
+                </div>
+            </div>
+            <div class="phude">
+                <div>2 reviews</div>
+                <div>Average rating: 10.0</div>
+            </div>
+            <div class="reviews">
+                <button class="so">10</button>
+                <div class="chu">Quá là tuyệt vời</div>
+                <div class="icon">
+                <i class="fa-solid fa-pen-to-square" style="margin-right: 10px;"></i>
+                <i class="fa-solid fa-xmark"></i>
+                </div>
+            </div>
+            <div class="reviews">
+                <button class="so">10</button>
+                <div class="chu">Quá là tuyệt vời</div>
+                <div class="icon">
+                <i class="fa-solid fa-pen-to-square" style="margin-right: 10px;"></i>
+                <i class="fa-solid fa-xmark"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

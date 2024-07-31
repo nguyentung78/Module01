@@ -9,119 +9,170 @@
         body {
             font-family: Arial, Helvetica, sans-serif;
         }
+
         .tong {
             display: flex;
             flex-wrap: wrap;
         }
+
         .card {
             border: 1px solid gainsboro;
             width: 200px;
             margin: 20px;
         }
 
+        .card img {
+            width: 200px;
+        }
+
         .content {
             padding: 10px;
         }
+
         button {
             color: rgb(104, 104, 223);
             background-color: white;
-            border: 1px dashed ;
+            border: 1px dashed;
             padding: 10px;
             display: inline;
             border-radius: 4px;
         }
+
         .footer {
             display: flex;
             flex-direction: row;
             justify-content: space-between;
         }
-        
+
+        @media only screen and (min-width: 1200px) {
+            .card {
+                border: 1px solid gainsboro;
+                width: 200px;
+                margin: 20px;
+            }
+            .card img {
+            width: 200px;
+        }
+        }
+
+        @media only screen and (max-width: 1200px) {
+            .card {
+                border: 1px solid gainsboro;
+                width: 200px;
+                margin: 20px;
+            }
+            .card img {
+            width: 200px;
+        }
+        }
+
+        @media only screen and (max-width: 991px) {
+            .card {
+                border: 1px solid gainsboro;
+                width: 200px;
+                margin: 20px;
+            }
+            .card img {
+            width: 200px;
+        }
+        }
+
+        @media only screen and (max-width: 590px) {
+            .card {
+                border: 1px solid gainsboro;
+                width: 200px;
+                margin: 20px;
+            }
+            .card img {
+            width: 200px;
+        }
+        }
     </style>
 </head>
 
 <body>
     <div class="tong">
-    <div class="card">
-        <div class="anh"><img src="https://btnmt.1cdn.vn/2018/10/10/chung-cu_2706112039.jpg" alt=""
-                style="width: 200px;"></div>
-        <div class="content">
-            <div class="title"><b>Khám phá đất đai bán chạy nhất trong Khu vực Đông Anh</b></div>
-            <div class="mota">
-                <p><img src="https://media.istockphoto.com/id/1148705812/vi/vec-to/vector-bi%E1%BB%83u-t%C6%B0%E1%BB%A3ng-v%E1%BB%8B-tr%C3%AD-d%E1%BA%A5u-ghim-b%E1%BB%8B-c%C3%B4-l%E1%BA%ADp-tr%C3%AAn-n%E1%BB%81n-tr%E1%BA%AFng-%C4%91i%E1%BB%81u-h%C6%B0%E1%BB%9Bng-b%E1%BA%A3n-%C4%91%E1%BB%93-gps-h%C6%B0%E1%BB%9Bng-%C4%91%E1%BB%8Ba.jpg?s=612x612&w=0&k=20&c=fKtEWidgUBehvqeh7eYebNXO_hxukwJR59oGehA3CgM="
-                        alt="" style="width: 20px;"> Huyện Đông Anh, Hà Nội</p>
-                <p><img src="https://cdn-icons-png.freepik.com/512/81/81422.png" alt="" style="width: 20px;"> <b>Diện
-                        tích:</b> Trên 40 m2</p>
-                <p><img src="https://cdn.icon-icons.com/icons2/3871/PNG/512/airdrop_icon_244297.png" alt=""
-                        style="width: 20px;"> <b>Mục đích sử dụng:</b> Đất ở</p>
+        <div class="card">
+            <div class="anh"><img src="https://btnmt.1cdn.vn/2018/10/10/chung-cu_2706112039.jpg" alt=""></div>
+            <div class="content">
+                <div class="title"><b>Khám phá đất đai bán chạy nhất trong Khu vực Đông Anh</b></div>
+                <div class="mota">
+                    <p><img src="https://media.istockphoto.com/id/1148705812/vi/vec-to/vector-bi%E1%BB%83u-t%C6%B0%E1%BB%A3ng-v%E1%BB%8B-tr%C3%AD-d%E1%BA%A5u-ghim-b%E1%BB%8B-c%C3%B4-l%E1%BA%ADp-tr%C3%AAn-n%E1%BB%81n-tr%E1%BA%AFng-%C4%91i%E1%BB%81u-h%C6%B0%E1%BB%9Bng-b%E1%BA%A3n-%C4%91%E1%BB%93-gps-h%C6%B0%E1%BB%9Bng-%C4%91%E1%BB%8Ba.jpg?s=612x612&w=0&k=20&c=fKtEWidgUBehvqeh7eYebNXO_hxukwJR59oGehA3CgM="
+                            alt="" style="width: 20px;"> Huyện Đông Anh, Hà Nội</p>
+                    <p><img src="https://cdn-icons-png.freepik.com/512/81/81422.png" alt="" style="width: 20px;">
+                        <b>Diện
+                            tích:</b> Trên 40 m2</p>
+                    <p><img src="https://cdn.icon-icons.com/icons2/3871/PNG/512/airdrop_icon_244297.png" alt=""
+                            style="width: 20px;"> <b>Mục đích sử dụng:</b> Đất ở</p>
+                </div>
+                <hr>
+                <div class="footer">
+                    <p>20 tỷ</p>
+                    <button>Xem chi tiết <b>></b></button>
+                </div>
             </div>
-            <hr>
-            <div class="footer">
-            <p>20 tỷ</p>
-            <button>Xem chi tiết <b>></b></button>
         </div>
+        <div class="card">
+            <div class="anh"><img src="https://btnmt.1cdn.vn/2018/10/10/chung-cu_2706112039.jpg" alt=""></div>
+            <div class="content">
+                <div class="title"><b>Khám phá đất đai bán chạy nhất trong Khu vực Đông Anh</b></div>
+                <div class="mota">
+                    <p><img src="https://media.istockphoto.com/id/1148705812/vi/vec-to/vector-bi%E1%BB%83u-t%C6%B0%E1%BB%A3ng-v%E1%BB%8B-tr%C3%AD-d%E1%BA%A5u-ghim-b%E1%BB%8B-c%C3%B4-l%E1%BA%ADp-tr%C3%AAn-n%E1%BB%81n-tr%E1%BA%AFng-%C4%91i%E1%BB%81u-h%C6%B0%E1%BB%9Bng-b%E1%BA%A3n-%C4%91%E1%BB%93-gps-h%C6%B0%E1%BB%9Bng-%C4%91%E1%BB%8Ba.jpg?s=612x612&w=0&k=20&c=fKtEWidgUBehvqeh7eYebNXO_hxukwJR59oGehA3CgM="
+                            alt="" style="width: 20px;"> Huyện Đông Anh, Hà Nội</p>
+                    <p><img src="https://cdn-icons-png.freepik.com/512/81/81422.png" alt="" style="width: 20px;">
+                        <b>Diện
+                            tích:</b> Trên 40 m2</p>
+                    <p><img src="https://cdn.icon-icons.com/icons2/3871/PNG/512/airdrop_icon_244297.png" alt=""
+                            style="width: 20px;"> <b>Mục đích sử dụng:</b> Đất ở</p>
+                </div>
+                <hr>
+                <div class="footer">
+                    <p>20 tỷ</p>
+                    <button>Xem chi tiết <b>></b></button>
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="anh"><img src="https://btnmt.1cdn.vn/2018/10/10/chung-cu_2706112039.jpg" alt=""></div>
+            <div class="content">
+                <div class="title"><b>Khám phá đất đai bán chạy nhất trong Khu vực Đông Anh</b></div>
+                <div class="mota">
+                    <p><img src="https://media.istockphoto.com/id/1148705812/vi/vec-to/vector-bi%E1%BB%83u-t%C6%B0%E1%BB%A3ng-v%E1%BB%8B-tr%C3%AD-d%E1%BA%A5u-ghim-b%E1%BB%8B-c%C3%B4-l%E1%BA%ADp-tr%C3%AAn-n%E1%BB%81n-tr%E1%BA%AFng-%C4%91i%E1%BB%81u-h%C6%B0%E1%BB%9Bng-b%E1%BA%A3n-%C4%91%E1%BB%93-gps-h%C6%B0%E1%BB%9Bng-%C4%91%E1%BB%8Ba.jpg?s=612x612&w=0&k=20&c=fKtEWidgUBehvqeh7eYebNXO_hxukwJR59oGehA3CgM="
+                            alt="" style="width: 20px;"> Huyện Đông Anh, Hà Nội</p>
+                    <p><img src="https://cdn-icons-png.freepik.com/512/81/81422.png" alt="" style="width: 20px;">
+                        <b>Diện
+                            tích:</b> Trên 40 m2</p>
+                    <p><img src="https://cdn.icon-icons.com/icons2/3871/PNG/512/airdrop_icon_244297.png" alt=""
+                            style="width: 20px;"> <b>Mục đích sử dụng:</b> Đất ở</p>
+                </div>
+                <hr>
+                <div class="footer">
+                    <p>20 tỷ</p>
+                    <button>Xem chi tiết <b>></b></button>
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="anh"><img src="https://btnmt.1cdn.vn/2018/10/10/chung-cu_2706112039.jpg" alt=""></div>
+            <div class="content">
+                <div class="title"><b>Khám phá đất đai bán chạy nhất trong Khu vực Đông Anh</b></div>
+                <div class="mota">
+                    <p><img src="https://media.istockphoto.com/id/1148705812/vi/vec-to/vector-bi%E1%BB%83u-t%C6%B0%E1%BB%A3ng-v%E1%BB%8B-tr%C3%AD-d%E1%BA%A5u-ghim-b%E1%BB%8B-c%C3%B4-l%E1%BA%ADp-tr%C3%AAn-n%E1%BB%81n-tr%E1%BA%AFng-%C4%91i%E1%BB%81u-h%C6%B0%E1%BB%9Bng-b%E1%BA%A3n-%C4%91%E1%BB%93-gps-h%C6%B0%E1%BB%9Bng-%C4%91%E1%BB%8Ba.jpg?s=612x612&w=0&k=20&c=fKtEWidgUBehvqeh7eYebNXO_hxukwJR59oGehA3CgM="
+                            alt="" style="width: 20px;"> Huyện Đông Anh, Hà Nội</p>
+                    <p><img src="https://cdn-icons-png.freepik.com/512/81/81422.png" alt="" style="width: 20px;">
+                        <b>Diện
+                            tích:</b> Trên 40 m2</p>
+                    <p><img src="https://cdn.icon-icons.com/icons2/3871/PNG/512/airdrop_icon_244297.png" alt=""
+                            style="width: 20px;"> <b>Mục đích sử dụng:</b> Đất ở</p>
+                </div>
+                <hr>
+                <div class="footer">
+                    <p>20 tỷ</p>
+                    <button>Xem chi tiết <b>></b></button>
+                </div>
+            </div>
         </div>
     </div>
-    <div class="card">
-        <div class="anh"><img src="https://btnmt.1cdn.vn/2018/10/10/chung-cu_2706112039.jpg" alt=""
-                style="width: 200px;"></div>
-        <div class="content">
-            <div class="title"><b>Khám phá đất đai bán chạy nhất trong Khu vực Đông Anh</b></div>
-            <div class="mota">
-                <p><img src="https://media.istockphoto.com/id/1148705812/vi/vec-to/vector-bi%E1%BB%83u-t%C6%B0%E1%BB%A3ng-v%E1%BB%8B-tr%C3%AD-d%E1%BA%A5u-ghim-b%E1%BB%8B-c%C3%B4-l%E1%BA%ADp-tr%C3%AAn-n%E1%BB%81n-tr%E1%BA%AFng-%C4%91i%E1%BB%81u-h%C6%B0%E1%BB%9Bng-b%E1%BA%A3n-%C4%91%E1%BB%93-gps-h%C6%B0%E1%BB%9Bng-%C4%91%E1%BB%8Ba.jpg?s=612x612&w=0&k=20&c=fKtEWidgUBehvqeh7eYebNXO_hxukwJR59oGehA3CgM="
-                        alt="" style="width: 20px;"> Huyện Đông Anh, Hà Nội</p>
-                <p><img src="https://cdn-icons-png.freepik.com/512/81/81422.png" alt="" style="width: 20px;"> <b>Diện
-                        tích:</b> Trên 40 m2</p>
-                <p><img src="https://cdn.icon-icons.com/icons2/3871/PNG/512/airdrop_icon_244297.png" alt=""
-                        style="width: 20px;"> <b>Mục đích sử dụng:</b> Đất ở</p>
-            </div>
-            <hr>
-            <div class="footer">
-            <p>20 tỷ</p>
-            <button>Xem chi tiết <b>></b></button>
-        </div>
-        </div>
-    </div>
-    <div class="card">
-        <div class="anh"><img src="https://btnmt.1cdn.vn/2018/10/10/chung-cu_2706112039.jpg" alt=""
-                style="width: 200px;"></div>
-        <div class="content">
-            <div class="title"><b>Khám phá đất đai bán chạy nhất trong Khu vực Đông Anh</b></div>
-            <div class="mota">
-                <p><img src="https://media.istockphoto.com/id/1148705812/vi/vec-to/vector-bi%E1%BB%83u-t%C6%B0%E1%BB%A3ng-v%E1%BB%8B-tr%C3%AD-d%E1%BA%A5u-ghim-b%E1%BB%8B-c%C3%B4-l%E1%BA%ADp-tr%C3%AAn-n%E1%BB%81n-tr%E1%BA%AFng-%C4%91i%E1%BB%81u-h%C6%B0%E1%BB%9Bng-b%E1%BA%A3n-%C4%91%E1%BB%93-gps-h%C6%B0%E1%BB%9Bng-%C4%91%E1%BB%8Ba.jpg?s=612x612&w=0&k=20&c=fKtEWidgUBehvqeh7eYebNXO_hxukwJR59oGehA3CgM="
-                        alt="" style="width: 20px;"> Huyện Đông Anh, Hà Nội</p>
-                <p><img src="https://cdn-icons-png.freepik.com/512/81/81422.png" alt="" style="width: 20px;"> <b>Diện
-                        tích:</b> Trên 40 m2</p>
-                <p><img src="https://cdn.icon-icons.com/icons2/3871/PNG/512/airdrop_icon_244297.png" alt=""
-                        style="width: 20px;"> <b>Mục đích sử dụng:</b> Đất ở</p>
-            </div>
-            <hr>
-            <div class="footer">
-            <p>20 tỷ</p>
-            <button>Xem chi tiết <b>></b></button>
-        </div>
-        </div>
-    </div>
-    <div class="card">
-        <div class="anh"><img src="https://btnmt.1cdn.vn/2018/10/10/chung-cu_2706112039.jpg" alt=""
-                style="width: 200px;"></div>
-        <div class="content">
-            <div class="title"><b>Khám phá đất đai bán chạy nhất trong Khu vực Đông Anh</b></div>
-            <div class="mota">
-                <p><img src="https://media.istockphoto.com/id/1148705812/vi/vec-to/vector-bi%E1%BB%83u-t%C6%B0%E1%BB%A3ng-v%E1%BB%8B-tr%C3%AD-d%E1%BA%A5u-ghim-b%E1%BB%8B-c%C3%B4-l%E1%BA%ADp-tr%C3%AAn-n%E1%BB%81n-tr%E1%BA%AFng-%C4%91i%E1%BB%81u-h%C6%B0%E1%BB%9Bng-b%E1%BA%A3n-%C4%91%E1%BB%93-gps-h%C6%B0%E1%BB%9Bng-%C4%91%E1%BB%8Ba.jpg?s=612x612&w=0&k=20&c=fKtEWidgUBehvqeh7eYebNXO_hxukwJR59oGehA3CgM="
-                        alt="" style="width: 20px;"> Huyện Đông Anh, Hà Nội</p>
-                <p><img src="https://cdn-icons-png.freepik.com/512/81/81422.png" alt="" style="width: 20px;"> <b>Diện
-                        tích:</b> Trên 40 m2</p>
-                <p><img src="https://cdn.icon-icons.com/icons2/3871/PNG/512/airdrop_icon_244297.png" alt=""
-                        style="width: 20px;"> <b>Mục đích sử dụng:</b> Đất ở</p>
-            </div>
-            <hr>
-            <div class="footer">
-            <p>20 tỷ</p>
-            <button>Xem chi tiết <b>></b></button>
-        </div>
-        </div>
-    </div>
-</div>
 </body>
 
 </html>

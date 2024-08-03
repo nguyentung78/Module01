@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let year = +prompt('Bạn sinh năm bao nhiêu?');
+        let age = 2024 - year;
+        if (!isNaN(year) && year > 0 && Number.isInteger(year)) {
+            console.log('số tuổi của bạn là: ',age);
+        } else {
+            console.log('giá trị ko hợp lệ');
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let so = +prompt('nhập vào 1 số bất kì để kiểm tra:');
+        if (isNaN(so)) {
+            console.log('ko hợp lệ');
+        } else if (so%2==0) {
+            console.log(`số ${so} là số chẵn`);
+        } else {
+            console.log(`số ${so} là số lẻ`);
+        }
+    </script>
+</body>
+</html>

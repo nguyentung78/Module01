@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let arr = [1,2,3,4,5,3,5,7,9,10];
+        let dem = [];
+        for (let check of arr) {
+            if (dem[check]) {
+                dem[check]++;
+            } else {
+                dem[check]=1;
+            }
+            
+        }
+        for (const check in dem) {
+            if (dem[check]>1) {
+                console.log(check);                
+            }
+        }
+        console.log('là các ptu xuất hiện từ 2 lần trở lên');
+        
+    </script>
+</body>
+</html>

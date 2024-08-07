@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let mang = [1,2,3,"tung", "hí ae", 20.3];
+        check = false;
+        for (let i = 0; i < mang.length; i++) {
+            if (Number.isInteger(mang[i])) {
+                console.log("số nguyên trong mảng là:", mang[i]);
+                check = true;
+            }
+            
+        }
+        if (check==false) {
+            console.log("Trong mảng không tồn tại số nguyên");
+            
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let arr = [1, 4, "hoa", "hùng", "thanh", 9];
+        let inp = +prompt('mời bạn nhập giá trị cần tìm');
+        let check = false;
+        for (let i = 0; i < arr.length; i++) {
+            if (arr[i] == inp) {
+                console.log(`giá trị ${inp} được tìm thấy ở vị trí ${i}`);
+                check = true;
+            } 
+        }
+        if (check==false) {
+                console.log('phần tử không tồn tại');
+            }
+    </script>
+</body>
+
+</html>

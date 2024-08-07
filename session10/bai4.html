@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let a = +prompt('nhập số nguyên dương a');
+        let b = +prompt('nhập số nguyên dương b');
+        let so = [];
+        if (isNaN(a)||isNaN(b)||a < 0|| b<0) {
+            console.log('bạn đã nhập sai, vui lòng nhập lại');
+            
+        } else {
+            
+        
+        for (let i = 1; i <= a;  i++) {
+            if (i%b==0) {
+                so.push(i);
+            }
+        }
+        for (let j = 1; j <= b; j++){
+            if (j%a==0) {
+                so.push(j);
+            }
+        }
+        console.log('mảng đó là', so);
+    }
+    </script>
+</body>
+</html>

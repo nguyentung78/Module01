@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let chuoi = prompt("Nhập vào chuỗi ký tự: ");
+        tong(chuoi);
+        function tong(str) {
+            let chars = [];
+            let counts = [];
+
+            for (let i = 0; i < str.length; i++) {
+                let char = str[i];
+                let index = chars.indexOf(char);
+                if (index === -1) {
+                    chars.push(char);
+                    counts.push(1);
+                } else {
+                    counts[index]++;
+                }
+            }
+            for (let i = 0; i < chars.length; i++) {
+                console.log(`Ký tự '${chars[i]}' xuất hiện ${counts[i]} lần.`);
+            }
+        }
+
+
+
+    </script>
+</body>
+
+</html>

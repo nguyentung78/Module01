@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let users = [];
+
+        function createUser() {
+            let user = {};
+            user.id = users.length + 1; 
+
+            while (true) {
+                user.user_name = prompt("Nhập tên người dùng:");
+                if (!user.user_name || user.user_name.length < 3) {
+                    alert("Tên phải có ít nhất 3 ký tự và không được để trống.");
+                } else {
+                    break;
+                }
+            }
+
+            while (true) {
+                user.email = prompt("Nhập email:");
+                let cam = /^[^\s@]+@[^\s@]+\.[^\s@]+$/; //biểu thức chính quy
+                if (!user.email || !cam.test(user.email)) {
+                    alert("Email không đúng định dạng và không được để trống.");
+                } else {
+                    break;
+                }
+            }
+
+            while (true) {
+                user.password = prompt("Nhập mật khẩu:");
+                if (!user.password || user.password.length < 8) {
+                    alert("Mật khẩu phải có ít nhất 8 ký tự và không được để trống.");
+                } else {
+                    break;
+                }
+            }
+
+            users.push(user);
+            alert("Người dùng đã được thêm thành công.");
+        }
+
+        createUser();
+
+        console.log(users);
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let ngdung = [];
+        function signup() {
+            let user = {};
+            user.id = ngdung.length + 1;
+
+            while (true) {
+                user.user_name = prompt("Nhập tên người dùng:");
+                if (!user.user_name || user.user_name.length < 3) {
+                    alert("Tên phải có ít nhất 3 ký tự và không được để trống.");
+                } else {
+                    break;
+                }
+            }
+
+            while (true) {
+                user.email = prompt("Nhập email:");
+                let cam = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                let checkEmail = false;
+                if (!user.email || !cam.test(user.email)) {
+                    alert("Email không đúng định dạng và không được để trống.");
+                } else {
+                    for (let i = 0; i < ngdung.length; i++) {
+                        if (ngdung[i].email === user.email) {
+                            checkEmail = true;
+                            break;
+                        }
+                    }
+                    if (checkEmail) {
+                        alert("Email đã tồn tại.");
+                    } else {
+                        break;
+                    }
+                }
+            }
+
+            while (true) {
+                user.password = prompt("Nhập mật khẩu:");
+                if (!user.password || user.password.length < 8) {
+                    alert("Mật khẩu phải có ít nhất 8 ký tự và không được để trống.");
+                } else {
+                    break;
+                }
+            }
+
+            ngdung.push(user);
+            alert("Người dùng đã đăng kí thành công.");
+        }
+
+        function signin() {
+            while (true) {
+                let email = prompt('Nhập vào email của bạn');
+                let password = prompt('Nhập vào password của bạn');
+                let user;
+                for (let i = 0; i < ngdung.length; i++) {
+                    if (ngdung[i].email === email && ngdung[i].password === password) {
+                        user = ngdung[i];
+                        break;
+                    }
+                }
+                if (user != undefined) {
+                    alert('Đăng nhập thành công');
+                    document.body.innerHTML += `<h2>Thông tin tài khoản:</h2>
+                        <p><strong>ID:</strong> ${user.id}</p>
+                        <p><strong>Tên người dùng:</strong> ${user.user_name}</p>
+                        <p><strong>Email:</strong> ${user.email}</p>
+                        <p><strong>Mật khẩu:</strong> ${user.password}</p>`
+                    break;
+                } else {
+                    alert("Đăng nhập thất bại. Email hoặc mật khẩu không đúng.");
+                }
+            }
+        }
+        function showMenu() {
+            while (true) {
+                let choice = prompt("Chọn chức năng: \n1. Đăng ký \n2. Đăng nhập \n3. Thoát");
+
+                if (choice === "1") {
+                    signup();
+                } else if (choice === "2") {
+                    signin();
+                } else if (choice === "3") {
+                    alert("Thoát chương trình.");
+                    break;
+                } else {
+                    alert("Lựa chọn không hợp lệ. Vui lòng chọn lại.");
+                }
+            }
+        }
+        showMenu();
+        console.log(ngdung);
+
+    </script>
+</body>
+
+</html>

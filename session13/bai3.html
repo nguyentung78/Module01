@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let arr = [];
+        let soluong = +prompt('nhập vào số lượng sinh viên');
+        if (isNaN(soluong)||soluong<=0) {
+            console.log('vui lòng nhập số lượng sinh viên hợp lệ');
+            
+        } else {
+            for (let i = 0; i < soluong; i++) {
+                let student = {};
+                student.id=prompt(`nhập vào id của sinh viên ${i+1}`);
+                student.name=prompt(`nhập vào tên sinh viên ${i+1}`);   
+                arr.push(student);             
+            }
+            for (const student of arr) {
+                console.log(`${student.id},${student.name}`);
+                
+            }
+        }
+        
+    </script>
+</body>
+</html>

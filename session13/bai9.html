@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let contacts = [];
+
+        function addContact() {
+            let name = prompt("Thêm tên liên lạc:");
+            let phone = prompt("Thêm số điện thoại:");
+            let email = prompt("Thêm email:");
+
+            let contact = {
+                name: name,
+                phone: phone,
+                email: email
+            };
+
+            contacts.push(contact);
+            alert("Đã thêm liên lạc thành công");
+        }
+
+        function findContactByName() {
+            let find = prompt('Nhập tên liên lạc cần tìm');
+            let findContact = false;
+
+            for (let i = 0; i < contacts.length; i++) {
+                if (contacts[i].name.toLowerCase() === find.toLowerCase()) {
+                    alert(`Tên: ${contacts[i].name}, Số điện thoại: ${contacts[i].phone}, Email: ${contacts[i].email}`);
+                    findContact = true;
+                    break;
+                }
+            }
+
+            if (!findContact) {
+                alert('Không tìm thấy liên hệ');
+            }
+        }
+
+        function displayContacts() {
+            if (contacts.length === 0) {
+                alert("Danh bạ trống.");
+            } else {
+                let listContact = "";
+                contacts.forEach(contact => {
+                    listContact += `Name: ${contact.name}, Phone: ${contact.phone}, Email: ${contact.email} \n`;
+                });
+                alert(listContact);
+            }
+        }
+
+        function deleteContactByName() {
+            let name = prompt('Nhập tên liên lạc cần xóa:');
+            if (!name) return alert('Tên không được để trống.');
+
+            let findDelete = -1;
+            for (let i = 0; i < contacts.length; i++) {
+                if (contacts[i].name === name) {
+                    findDelete = i;
+                    break;
+                }
+            }
+            if (findDelete != -1) {
+                contacts.splice(findDelete, 1);
+                alert(`Đã xóa thành công liên hệ ${name}`)
+            } else {
+                alert('Ko tìm thấy liên hệ')
+            }
+        }
+
+        function updateContactByName() {
+            let name = prompt('Nhập tên liên lạc cần cập nhật');
+            if (!name) return alert('Tên không được để trống.');
+            let findUpdate = -1;
+            for (let i = 0; i < contacts.length; i++) {
+                if (contacts[i].name === name) {
+                    findUpdate = i;
+                    break;
+                }
+            }
+            if (findUpdate != -1) {
+                let contact = contacts[findUpdate];
+                contact.name = prompt('Nhập tên mới:', contact.name) || contact.name;
+                contact.phone = prompt('Nhập số điện thoại mới:', contact.phone) || contact.phone;
+                contact.email = prompt('Nhập email mới:', contact.email) || contact.email;
+                alert('Đã cập nhật liên lạc thành công');
+            } else {
+                alert('Không tìm thấy liên hệ');
+            }
+        }
+        function Menu() {
+            while (true) {
+                let choice = prompt("Chọn chức năng: \n1. Thêm liên lạc \n2. Tìm kiếm liên lạc \n3. Xóa liên lạc \n4. Danh bạ \n5. Cập nhật liên lạc \n6. Thoát");
+                if (choice === "1") {
+                    addContact();
+                } else if (choice === "2") {
+                    findContactByName();
+                } else if (choice === "3") {
+                    deleteContactByName();
+                } else if (choice === "4") {
+                    displayContacts();
+                } else if (choice === "5") {
+                    updateContactByName();
+                } else if (choice === "6") {
+                    break;
+                } else {
+                    alert("Lựa chọn không hợp lệ. Vui lòng chọn lại.");
+                }
+            }
+        }
+        Menu();
+        console.log(contacts);
+    </script>
+</body>
+
+</html>

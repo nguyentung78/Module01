@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let books=[
+            {author:'tung', name:'thánh sống là ta'},
+            {author:'thuan', name:'troll'},
+            {author:'duc', name:'hí ae'}
+        ];
+        let find = prompt('nhập tên tác giả cần tìm');
+        let findBook = false;
+        for (let i = 0; i < books.length; i++) {
+            if (books[i].author===find) {
+                console.log(`${books[i].author},${books[i].name}`);
+                findBook = true;
+            }
+            
+        }
+        if (!findBook){
+                console.log('Không tìm thấy sách');
+                
+            }
+    </script>
+</body>
+</html>

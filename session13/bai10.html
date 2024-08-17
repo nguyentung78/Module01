@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Shopping Cart</h1>
+    <script>
+        let Product = [
+            { name: 'ip11', price: 100000 },
+            { name: 'ip12', price: 300000 },
+            { name: 'ip13', price: 500000 },
+            { name: 'ip14', price: 700000 }
+
+        ]
+        document.write(JSON.stringify(Product));
+        //tạo giỏ hàng để chứa sản phẩm:
+        let shoppingCart = [];
+
+        function addToCart(productName, price, quantity) {
+            let nameProduct = prompt('Mời nhập tên sản phẩm');
+            // let check=false;
+            // for (let i = 0; i < Product.length; i++) {
+            //     if (Product[i].name===name) {
+            //         check=true;
+            //         break;
+            //     }                
+            // }
+            // if (!check) {
+            //     console.log('sản phẩm ko có trong cửa hàng');
+
+            // }
+
+            let findProduct = Product.find((item) => {
+                return item.name = nameProduct;
+            })
+            console.log('findProduct', findProduct);
+            if (!findProduct) {
+                console.log('ko có');
+
+            } else {
+                /*
+                    khi thêm sản phẩm vào giỏ hàng thì ktra xem sản phẩm có trong giỏ hàng chưa , 
+                    nếu có thì tăng số lượng, chưa có thì thêm bthg
+                */
+                let findIndex = shoppingCart.findIndex((item) => {
+                    return item.name == nameProduct;
+                })
+                // findIndex trả về -1 chứng tỏ trong giỏ hàng chưa có
+                if (findIndex == -1) {
+                    shoppingCart.push({ ...findProduct, quantity: 1 })
+                } else {
+                    //trong giỏ hàng có r
+                    shoppingCart[findIndex].quantity = ++shoppingCart[findIndex].quantity;
+                }
+                console.log(shoppingCart);
+
+            }
+        }
+
+        //viết hàm xóa sản phẩm trong shoppingCart
+        function removeFromCart(productName) {
+            // cho ng dùng nhập tên sản phẩm cần xóa
+            let nameProduct = prompt('Nhập tên sản phẩm muốn xóa');
+            let findIndex = shoppingCart.findIndex((item)=>{
+                return item.name==nameProduct;
+            })
+            if (findIndex==-1) {
+                console.log('sản phẩm bạn muốn xóa ko có trong giỏ hàng');
+            } else {
+                shoppingCart[findIndex].quantity-=1;
+                console.log('Giỏ hàng hiện tại', shoppingCart);
+                
+            }
+        }
+
+        //hàm show sản phẩm trong giỏ hàng
+        function displayCart() {
+            if (shoppingCart.length == 0) {
+                document.write(JSON.stringify(Product));
+                document.write('<br>');
+                document.write('ko có sản phẩm trong giỏ hàng');
+            } else {
+                document.write(JSON.stringify(Product));
+                document.write('<br>');
+                document.write(JSON.stringify(shoppingCart));
+            }
+        }
+
+    </script>
+    <br>
+    <button onclick="addToCart()">Mua hàng</button>
+    <button onclick="removeFromCart()">Xóa sản phẩm trong Giỏ hàng </button>
+</body>
+
+</html>

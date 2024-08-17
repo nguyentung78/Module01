@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alert Example</title>
+</head>
+<body>
+    <button id="bt1">Press to say hi</button>
+
+    <script>
+        let button = document.getElementById("bt1");
+
+        button.onclick = function() {
+            alert("Hi");
+        };
+
+        button.style.padding = "15px";
+        button.style.backgroundColor = "#80C2FD";
+        button.style.border = "1px solid white";
+        button.style.borderRadius = "10px";
+        button.style.position = "fixed";
+        button.style.bottom = "20px";
+        button.style.left = "50%";
+        button.style.transform = "translateX(-50%)"; 
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+<body>
+    <h1 id="h1">This text is opitional</h1>
+    <button onclick="change()" id="button">Press to say hi</button>
+
+    <script>        
+        let button = document.getElementById("button");
+        button.style.padding = "15px";
+        button.style.backgroundColor = "#80C2FD";
+        button.style.border = "1px solid white";
+        button.style.borderRadius = "10px";
+        function change() {
+            document.getElementById('h1').innerHTML='Text after change'
+        }
+    </script>
+</body>
+</html>

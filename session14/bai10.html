@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- TextContent -->
+    <div id="example">
+        <p>Hello <strong>World</strong></p>
+    </div>
+    
+    <script>
+        let text = document.getElementById('example').textContent;
+        console.log(text); // "Hello World" (không bao gồm thẻ HTML)
+    </script>
+    
+    <!-- innerText -->
+    <div id="example">
+        <p>Hello <strong style="display: none;">World</strong></p>
+    </div>
+    
+    <script>
+        let innerText = document.getElementById('example').innerText;
+        console.log(innerText); // "Hello" (không bao gồm "World" vì nó bị ẩn bởi CSS)
+    </script>
+
+    <!-- innerHTML -->
+    <div id="example">
+        <p>Hello <strong>World</strong></p>
+    </div>
+    
+    <script>
+        let html = document.getElementById('example').innerHTML;
+        console.log(html); // "<p>Hello <strong>World</strong></p>" (bao gồm cả thẻ HTML)
+    
+        // Thay đổi nội dung HTML
+        document.getElementById('example').innerHTML = "<p>New Content</p>";
+    </script>
+    
+</body>
+</html>

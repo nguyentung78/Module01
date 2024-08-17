@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table,
+        th,
+        td {
+            border: 1px solid black;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            border-radius: 15px;
+            border: none;
+            background-color: #57cd5b;
+            color: black;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <table id="table">
+        <tr>
+            <td>Cell 1 row 1</td>
+            <td>Cell 2 row 1</td>
+            <td>Cell 3 row 1</td>
+
+        </tr>
+    </table>
+    <br>
+    <button onclick="addTable()">add now</button>
+    <script>
+        let hang = 1;
+
+        function addTable() {
+            hang++;
+            let table = document.getElementById('table');
+            let newHang = table.insertRow();
+            for (let i = 1; i <= 3; i++) {
+                let moi = newHang.insertCell();
+                moi.textContent = `Cell ${i} row ${hang}`
+            }
+        }
+    </script>
+</body>
+
+</html>

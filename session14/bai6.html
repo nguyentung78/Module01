@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thêm Item vào Danh Sách</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        input[type="text"] {
+            padding: 10px;
+            font-size: 16px;
+            border-radius: 25px;
+            border: 1px solid #ccc;
+            width: 300px;
+            margin-right: 10px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            border-radius: 25px;
+            border: none;
+            background-color: #4CAF50;
+            color: white;
+            cursor: pointer;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        ul li {
+            margin: 5px 0;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+    <input type="text" id="inp">
+    <button onclick="addItem()">add item</button>
+    <ul id="list">
+        <li>Item 1</li>
+        <li>Item 123</li>
+    </ul>
+    <script>
+        function addItem() {
+            let itemValue = document.getElementById("inp").value;
+
+            if (itemValue !== "") {
+                let li = document.createElement("li");
+                li.textContent = itemValue;
+                document.getElementById("list").appendChild(li);
+                document.getElementById("inp").value = "";
+
+            }else {
+                alert('vui lòng ko để trống')
+            }
+        }
+    </script>
+
+</body>
+</html>
